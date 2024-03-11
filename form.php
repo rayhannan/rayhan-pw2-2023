@@ -1,52 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-<div class="container">
-    <form action="form_belanja.php" method="POST">
-        <h3>Belanja barang Online</h3>
-        <hr>
-        <div class="form-group row">
-            <label for="text" class="col-4 col-form-label">Customer</label> 
-            <div class="col-3">
-                <input id="text" name="customer" type="text" class="form-control" required="required">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-4">Pilih Produk</label> 
-            <div class="col-8">
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input name="produk" id="radio_playstation" type="radio" class="custom-control-input" value="Playstation"> 
-                    <label for="radio_playstation" class="custom-control-label">Playstation</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input name="produk" id="radio_televisi" type="radio" class="custom-control-input" value="Televisi"> 
-                    <label for="radio_televisi" class="custom-control-label">Televisi</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input name="produk" id="radio_ac" type="radio" class="custom-control-input" value="AC"> 
-                    <label for="radio_ac" class="custom-control-label">AC</label>
-                </div>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="text1" class="col-4 col-form-label">Jumlah</label> 
-            <div class="col-3">
-                <input id="text1" name="jumlah" placeholder="Jumlah" type="number" required="required" class="form-control">
-            </div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form action="proses_form.php" method="POST" class="w-50">
+  <h1>Form</h1>  
+  <div class="form-group row">
+    <label for="nim" class="col-4 col-form-label">NIM</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-adn"></i>
+          </div>
         </div> 
-        <div class="form-group row">
-            <div class="offset-4 col-8">
-                <button name="proses" type="submit" class="btn btn-success">Kirim</button>
-            </div>
-        </div>
-    </form>
-</div>
-</body>
-</html>
+        <input id="nim" name="nim" type="text" class="form-control" required="required">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="nama" class="col-4 col-form-label">Nama</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-address-card"></i>
+          </div>
+        </div> 
+        <input id="nama" name="nama" type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-4">Jenis Kelamin</label> 
+    <div class="col-8">
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="jenis_kelamin" id="jenis_kelamin_0" type="radio" class="custom-control-input" value="Laki-laki" required="required"> 
+        <label for="jenis_kelamin_0" class="custom-control-label">Laki-laki</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input name="jenis_kelamin" id="jenis_kelamin_1" type="radio" class="custom-control-input" value="Perempuan" required="required"> 
+        <label for="jenis_kelamin_1" class="custom-control-label">Perempuan</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="program_studi" class="col-4 col-form-label">Program Studi</label> 
+    <div class="col-8">
+      <select id="programstudi" name="programstudi" class="custom-select" required="required">
+        <option value="Teknik Informatika">Teknik Informatika</option>
+        <option value="Sistem Informasi">Sistem Informasi</option>
+        <option value="Bisnis Digital">Bisnis Digital</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-4">Keahlian</label> 
+    <div class="col-8">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="keahlian" id="keahlian_0" type="checkbox" class="custom-control-input" value="HTML"> 
+        <label for="keahlian_0" class="custom-control-label">HTML</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="keahlian" id="keahlian_1" type="checkbox" class="custom-control-input" value="CSS"> 
+        <label for="keahlian_1" class="custom-control-label">CSS</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="keahlian" id="keahlian_2" type="checkbox" class="custom-control-input" value="JavaScript"> 
+        <label for="keahlian_2" class="custom-control-label">JavaScript</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="keahlian" id="keahlian_3" type="checkbox" class="custom-control-input" value="RWD Bootstrap"> 
+        <label for="keahlian_3" class="custom-control-label">RWD Bootstrap</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="keahlian" id="keahlian_4" type="checkbox" class="custom-control-input" value="PHP"> 
+        <label for="keahlian_4" class="custom-control-label">PHP</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="keahlian" id="keahlian_5" type="checkbox" class="custom-control-input" value="Python"> 
+        <label for="keahlian_5" class="custom-control-label">Python</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="keahlian" id="keahlian_6" type="checkbox" class="custom-control-input" value="Java"> 
+        <label for="keahlian_6" class="custom-control-label">Java</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="domisili" class="col-4 col-form-label">Domisili</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-drivers-license"></i>
+          </div>
+        </div> 
+        <input id="domisili" name="domisili" type="text" class="form-control" required="required">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="email" class="col-4 col-form-label">Email</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-envelope"></i>
+          </div>
+        </div> 
+        <input id="email" name="email" type="text" class="form-control" required="required">
+      </div>
+    </div>
+  </div> 
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
